@@ -1,10 +1,9 @@
 import os
-from datetime import timedelta
 from pathlib import Path
+from datetime import timedelta
 
 from dotenv import load_dotenv
-from corsheaders.defaults  import  default_headers
-from loguru import logger
+from corsheaders.defaults import default_headers
 
 
 load_dotenv(".env")
