@@ -2,4 +2,4 @@
 __pycache__
 *.egg-info
 venv
-backend/config/settings.py
+settings.py
