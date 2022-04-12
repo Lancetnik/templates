@@ -1,0 +1,15 @@
+services:
+  sockets:
+    build: ./
+    volumes:
+      - ./app:/code
+    networks:
+      - app
+    ports:
+      - 8001:8001
+      - 8002:8002
+    command: venv/bin/uvicorn serve:app --host 0.0.0.0 --port 8001
+
+networks:
+  app:
+    driver: bridge

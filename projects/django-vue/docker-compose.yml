@@ -1,0 +1,23 @@
+services:
+  postgres:
+    image: postgres:14
+    environment:
+      POSTGRES_PASSWORD: password
+      POSTGRES_USER: user
+      POSTGRES_DB: db
+    volumes:
+      - data_pg:/var/lib/postgresql/data
+    ports:
+      - 5433:5432
+    networks:
+      - app
+
+
+volumes:
+  data_pg:
+    driver: local
+
+
+networks:
+  app:
+    driver: bridge
